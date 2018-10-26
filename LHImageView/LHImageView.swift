@@ -102,7 +102,7 @@ open class LHImageView: UIImageView {
         delegate?.imageViewDidChange(self)
     }
     
-    @objc private func _share(_ sender: Any?) {
+    @objc open func _share(_ sender: Any?) {
         guard let image = image else { return }
         let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         if let popoverController = activityVC.popoverPresentationController {
