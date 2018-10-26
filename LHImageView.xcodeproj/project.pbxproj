@@ -13,6 +13,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		710F8D11218305F400E4C022 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7146A57721817748009F7F1F /* LHImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LHImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7146A57A21817748009F7F1F /* LHImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHImageView.h; sourceTree = "<group>"; };
 		7146A57B21817748009F7F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +36,7 @@
 		7146A56D21817748009F7F1F = {
 			isa = PBXGroup;
 			children = (
+				710F8D11218305F400E4C022 /* README.md */,
 				7146A57921817748009F7F1F /* LHImageView */,
 				7146A57821817748009F7F1F /* Products */,
 				7146A6132181CBD2009F7F1F /* Frameworks */,
