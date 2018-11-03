@@ -16,12 +16,48 @@ public protocol LHImageViewDelegate: AnyObject {
     func imageView(_ imageView: LHImageView, performAction action: Selector, sender: Any?)
 }
 
+@IBDesignable
 open class LHImageView: UIImageView {
+    
+    @IBInspectable
+    open var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
+    
+    @IBInspectable
+    open var borderColor: UIColor? {
+        get {
+            if let color = layer.borderColor {
+                return UIColor(cgColor: color)
+            } else {
+                return nil
+            }
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+    }
+    
+    @IBInspectable
+    open var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
     
     open weak var delegate: LHImageViewDelegate?
     
     override open var canBecomeFirstResponder: Bool {
-        return true
+        return isUserInteractionEnabled
     }
     
     override open func awakeFromNib() {
